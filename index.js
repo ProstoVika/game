@@ -5,7 +5,6 @@ let randomQuote = document.querySelector('.random-quote');
 let quoteOne = document.querySelector('.quote-one');
 let quoteTwo = document.querySelector('.quote-two');
 let quoteThree = document.querySelector('.quote-three');
-
 const score = document.getElementById('score');
 let correctAnswers = 0;
 const startGameBtn = document.getElementById('startGameBtn');
@@ -97,7 +96,6 @@ titleButtons.forEach(button => {
     });
 }
  startGameBtn.addEventListener('click', () => {
-
     nextButton.click();
     updateScore();
 });
