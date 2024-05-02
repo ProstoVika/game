@@ -1,0 +1,110 @@
+{
+  "tasks": [
+    {
+      "title": "Object",
+      "quote": "console.log(typeof null);"
+
+    },
+    {
+      "title": "'10'",
+      "quote": "\"\" + 1 + 0;"
+
+    },
+    {
+      "title": "-1",
+      "quote": "\"\" - 1 + 0;"
+
+    },
+    {
+      "title": "1",
+      "quote": "true + false;"
+
+    },
+    {
+      "title": "2",
+      "quote": "6 / \"3\";"
+
+    },
+    {
+      "title": "6",
+      "quote": "\"2\" * \"3\""
+
+    },
+    {
+      "title": "'9px'",
+      "quote": "4 + 5 + \"px\";"
+
+    },
+    {
+      "title": "'$45'",
+      "quote": "\"$\" + 4 + 5;"
+
+    },
+    {
+      "title": "2",
+      "quote": "\"4\" - 2"
+
+    },
+    {
+      "title": "NaN",
+      "quote": "\"4px\" - 2;"
+
+    },
+    {
+      "title": "infinity",
+      "quote": "7 / 0;"
+
+    },
+    {
+      "title": "'-9 5'",
+      "quote": "\" -9 \" + 5;"
+
+    },
+    {
+      "title": "-14",
+      "quote": "\" -9 \" - 5;"
+
+    },
+    {
+      "title": "1",
+      "quote": "null + 1;"
+
+    },
+    {
+      "title": "NaN",
+      "quote": "undefined + 1;"
+
+    },
+    {
+      "title": "-2",
+      "quote": "\" \\t \\n\" - 2;"
+
+    },
+    {
+      "title": "true",
+      "quote": "null == undefined;"
+
+    },
+    {
+      "title": "false",
+      "quote": "null === undefined;"
+
+    },
+    {
+      "title": "false",
+      "quote": "alert(null > 0);"
+
+    },
+    {
+      "title": "false",
+      "quote": "alert(null == 0);"
+
+    },
+    {
+      "title": "true",
+      "quote": "alert(null >= 0);"
+
+    }
+
+  ]
+}
