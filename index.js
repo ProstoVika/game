@@ -67,30 +67,58 @@ loadNextQuestion = () => {
                 } else {
                     button.dataset.winner = 'false'
                 }
+                button.disabled = false;
             })
 
         })
-
 }
+
+
 
 titleButtons.forEach(button => {
     button.addEventListener('click', () => {
         if (!button.classList.contains('correct') && !button.classList.contains('incorrect')) {
             const isCorrect = button.dataset.winner === 'true';
             button.classList.add(isCorrect ? 'correct' : 'incorrect');
+            disableButtons();
             if (isCorrect) {
                 correctAnswers++;
                 updateScore();
+
             }
+
         }
     });
 });
+
+ disableButtons = () => {
+    titleButtons.forEach(button => {
+        button.disabled = true;
+    });
+}
  startGameBtn.addEventListener('click', () => {
 
     nextButton.click();
     updateScore();
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // It's add later just for web dys
 /*
 
 
