@@ -5,19 +5,16 @@
       "options": ["undefined", "number", "object"],
       "correctIndex": 2
     },
-
     {
       "quote": "\"\" + 1 + 0;",
       "options": ["10", "NaN", "1"],
       "correctIndex": 0
     },
-
     {
       "quote": "\"\" - 1 + 0;",
       "options": ["1", "0", "-1"],
       "correctIndex": 2
     },
-
     {
       "quote": "true + false;",
       "options": ["true", "false", "1"],
@@ -38,7 +35,6 @@
       "options": ["2", "42", "-2"],
       "correctIndex": 0
     },
-
     {
       "quote": "7 / 0;",
       "options": ["NaN", "undefined", "infinity"],
@@ -83,11 +79,6 @@
       "quote": "alert(null == 0);",
       "options": ["undefined", "false", "true"],
       "correctIndex": 1
-    },
-    {
-      "quote": "alert(null >= 0);",
-      "options": ["undefined", "false", "true"],
-      "correctIndex": 2
     },
     {
       "quote": "console.log({} + {});",
@@ -142,6 +133,11 @@
     {
       "quote": "NaN === NaN;",
       "options": ["true", "false", "NaN"],
+      "correctIndex": 1
+    },
+    {
+      "quote": "\"$\" + 4 + 5;",
+      "options": ["45", "'$45'", "9"],
       "correctIndex": 1
     }
   ]
