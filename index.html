@@ -13,7 +13,7 @@
 
 <div class="page-wrap">
 <header class="header">
-    <h2>What will be displayed?</h2>
+    <h2>What will be displayed in the console?</h2>
     <canvas id="particle-canvas"></canvas>
 </header>
 
@@ -39,27 +39,44 @@
 <!--    <div class="conditions"><button class="btn"></button> </div>-->
 
     <div class="conditions">
+        <div class="countdown-container">
 
-        <button class="btn" id="startGameBtn"> <span class="press">Press start</span> </button>
-        <div id="score"></div>
-<!--        <div class="timer" id="timer"></div>-->
+            <button class="btn" id="startGameBtn"> <span class="press">Press start</span>
+                <svg class="countdown-svg" viewBox="0 0 100 100">
+
+                    <circle class="countdown-circle" cx="50" cy="50" r="45"></circle>
+                    <text class="countdown-text" x="42" y="35"></text>
+                </svg>
+
+            </button>
+
+        </div>
 
     </div>
 
-    <article class="article">
-        <section class="random-box">
+
+    <div id="score"></div>
+
+    <article class="game-container">
+        <section class="questions-answers hidden">
+        <div class="random-box">
             <div class="random-quote"></div>
-        </section>
+        </div>
 
         <section class="answers">
             <button class="quote-one title"></button>
             <button class="quote-two title"></button>
             <button class="quote-three title"></button>
             <button id="nextButton"> &#10095;</button>
+
         </section>
-    </article>
+            </section>
+        </article>
+
+
+  </div>
 </div>
-</div>
+
 </body>
 </html>
 

@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ body {
 
 .page-wrap {
     position: relative;
-
+background-color: #292b31;
     /*background: no-repeat center url("./images/1.jpg");*/
     object-fit: cover;
     width: 100%;
@@ -56,13 +60,7 @@ h2:hover {
     width: 100%;
     text-align: center;
 }
-.press{
-    text-align: center;
-    font-size: 15px;
-    display: block;
-    margin-bottom: 210px;
 
-}
 .wrapper {
     position: absolute;
     top: 55%;
@@ -87,15 +85,6 @@ h2:hover {
 #particle-canvas {
     width: 100%; /* dots*/
     height: 500px;
-}
-
-article {
-    position: absolute;
-    text-align: left;
-}
-
-.hidden {
-    display: none;
 }
 
 .instructions-box {
@@ -158,10 +147,14 @@ article {
 .instructions-close-button:hover {
     box-shadow: -3px -1px 3px 3px #0e577e, 3px 3px 5px #0e577e;
 }
-.random-quote{
-    height: 50px;
-}
 
+.press{
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 210px;
+
+}
 .btn {
     display: flex;
     position: relative;
@@ -180,6 +173,8 @@ article {
     box-shadow: inset -5px -5px 7px #ffffff, inset 3px 3px 5px #d1d6f8;
     background: no-repeat center/100% url("./images/2.jpg");
     font-size: 10rem;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .btn:hover {
@@ -188,10 +183,76 @@ article {
     border-color: #ffff01;
 }
 
-.answers {
-    font-size: 1rem;
-    padding: 5px 10px;
+
+.conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-container {
     position: relative;
+}
+
+.countdown-svg {
+    position: absolute;
+    width:  2.0em;
+    height: 2.0em;
+}
+
+.countdown-circle {
+    fill: none;
+
+    stroke: #dbba34;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 1s linear;
+}
+
+
+
+.countdown-text {
+    /*display: none;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    opacity: 0.3;
+}
+
+
+#score{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.random-box{
+    width: 600px;
+    height: 35px;
+}
+.random-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+.hidden {
+    display: none;
+}
+.answers {
+    position: absolute;
+    font-size: 1rem;
     align-items: center;
 }
 
@@ -199,8 +260,8 @@ article {
     position: absolute;
     display: flex;
     align-items: center;
-    right: -55px;
-    top: 50%;
+    right: -80px;
+    top:50%;
     transform: translateY(-50%);
     font-size: 2rem;
     padding: 16px;
@@ -215,13 +276,6 @@ article {
 
 #nextButton:hover {
     background-color: #1a3a1a;
-}
-.random-quote {
-    width: 530px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
 }
 
 .title {
@@ -255,11 +309,6 @@ article {
 
 .incorrect {
     background-color: #811010;
-}
-#score{
-    display: flex;
-    align-items: center;
-    justify-content: left;
 }
 
 

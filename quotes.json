@@ -1,110 +1,148 @@
 {
   "tasks": [
     {
-      "title": "Object",
-      "quote": "console.log(typeof null);"
+      "quote": "console.log(typeof null);",
+      "options": ["undefined", "number", "object"],
+      "correctIndex": 2
+    },
 
+    {
+      "quote": "\"\" + 1 + 0;",
+      "options": ["10", "NaN", "1"],
+      "correctIndex": 0
+    },
+
+    {
+      "quote": "\"\" - 1 + 0;",
+      "options": ["1", "0", "-1"],
+      "correctIndex": 2
+    },
+
+    {
+      "quote": "true + false;",
+      "options": ["true", "false", "1"],
+      "correctIndex": 2
     },
     {
-      "title": "'10'",
-      "quote": "\"\" + 1 + 0;"
-
+      "quote": "6 / \"3\";",
+      "options": ["undefined", "2", "3"],
+      "correctIndex": 1
     },
     {
-      "title": "-1",
-      "quote": "\"\" - 1 + 0;"
-
+      "quote": "4 + 5 + \"px\";",
+      "options": ["9px", "\"9px\"", "9"],
+      "correctIndex": 1
     },
     {
-      "title": "1",
-      "quote": "true + false;"
+      "quote": "\"4\" - 2;",
+      "options": ["2", "42", "-2"],
+      "correctIndex": 0
+    },
 
+    {
+      "quote": "7 / 0;",
+      "options": ["NaN", "undefined", "infinity"],
+      "correctIndex": 2
     },
     {
-      "title": "2",
-      "quote": "6 / \"3\";"
-
+      "quote": "\" -9 \" - 5;",
+      "options": ["4", "-14", "-95"],
+      "correctIndex": 1
     },
     {
-      "title": "6",
-      "quote": "\"2\" * \"3\""
-
+      "quote": "null + 1;",
+      "options": ["1", "null", "undefined"],
+      "correctIndex": 0
     },
     {
-      "title": "'9px'",
-      "quote": "4 + 5 + \"px\";"
-
+      "quote": "undefined + 1;",
+      "options": ["NaN", "1", "undefined"],
+      "correctIndex": 0
     },
     {
-      "title": "'$45'",
-      "quote": "\"$\" + 4 + 5;"
-
+      "quote": "\" \\t \\n\" - 2;",
+      "options": ["undefined", "2", "-2"],
+      "correctIndex": 0
     },
     {
-      "title": "2",
-      "quote": "\"4\" - 2"
-
+      "quote": "null == undefined;",
+      "options": ["undefined", "true", "false"],
+      "correctIndex": 1
     },
     {
-      "title": "NaN",
-      "quote": "\"4px\" - 2;"
-
+      "quote": "null === undefined;",
+      "options": ["undefined", "true", "false"],
+      "correctIndex": 2
     },
     {
-      "title": "infinity",
-      "quote": "7 / 0;"
-
+      "quote": "alert(null > 0);",
+      "options": ["false","undefined", "true"],
+      "correctIndex": 0
     },
     {
-      "title": "'-9 5'",
-      "quote": "\" -9 \" + 5;"
-
+      "quote": "alert(null == 0);",
+      "options": ["undefined", "false", "true"],
+      "correctIndex": 1
     },
     {
-      "title": "-14",
-      "quote": "\" -9 \" - 5;"
-
+      "quote": "alert(null >= 0);",
+      "options": ["undefined", "false", "true"],
+      "correctIndex": 2
     },
     {
-      "title": "1",
-      "quote": "null + 1;"
-
+      "quote": "console.log({} + {});",
+      "options": ["[object Object][object Object]", "[object Object]", "{ }"],
+      "correctIndex": 0
     },
     {
-      "title": "NaN",
-      "quote": "undefined + 1;"
-
+      "quote": "console.log({} - {});",
+      "options": ["[object Object][object Object]", "{ }", "NaN"],
+      "correctIndex": 2
     },
     {
-      "title": "-2",
-      "quote": "\" \\t \\n\" - 2;"
-
+      "quote": "[1, 2] + [3, 4];",
+      "options": ["1,23,4", "[12] [34]", "1234"],
+      "correctIndex": 0
     },
     {
-      "title": "true",
-      "quote": "null == undefined;"
-
+      "quote": "++2;",
+      "options": ["3", "2", "undefined"],
+      "correctIndex": 0
     },
     {
-      "title": "false",
-      "quote": "null === undefined;"
-
+      "quote": "2++;",
+      "options": ["3", "2", "undefined"],
+      "correctIndex": 1
     },
     {
-      "title": "false",
-      "quote": "alert(null > 0);"
-
+      "quote": "\"5\" > 3;",
+      "options": ["true", "false", "1"],
+      "correctIndex": 1
     },
     {
-      "title": "false",
-      "quote": "alert(null == 0);"
-
+      "quote": "\"sega\" - 5;",
+      "options": ["true", "false", "NaN"],
+      "correctIndex": 2
     },
     {
-      "title": "true",
-      "quote": "alert(null >= 0);"
-
+      "quote": "undefined > 0;",
+      "options": ["true", "false", "NaN"],
+      "correctIndex": 1
+    },
+    {
+      "quote": "null == undefined;",
+      "options": ["true", "false", "NaN"],
+      "correctIndex": 0
+    },
+    {
+      "quote": "  null > 0;",
+      "options": ["true", "false", "NaN"],
+      "correctIndex": 1
+    },
+    {
+      "quote": "NaN === NaN;",
+      "options": ["true", "false", "NaN"],
+      "correctIndex": 1
     }
-
   ]
 }

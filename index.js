@@ -2,14 +2,16 @@ let instructionsButton = document.querySelector('.instructions-button');
 let instructionsBox = document.querySelector('.instructions-box');
 let instructionsCloseButton = document.querySelector('.instructions-close-button');
 let randomQuote = document.querySelector('.random-quote');
-let quoteOne = document.querySelector('.quote-one');
-let quoteTwo = document.querySelector('.quote-two');
-let quoteThree = document.querySelector('.quote-three');
+
 const score = document.getElementById('score');
 let correctAnswers = 0;
 const startGameBtn = document.getElementById('startGameBtn');
 const titleButtons = document.querySelectorAll('.title');
 const nextButton = document.getElementById('nextButton');
+
+let timer;
+const countdownNumberEl = document.querySelector('.countdown-text');
+const questionsAnswersSection = document.querySelector('.questions-answers');
 
 instructionsButton.addEventListener('click', () => {
     instructionsBox.classList.remove('hidden');
@@ -24,6 +26,7 @@ const updateScore = () => {
 const getRandomIndexFromArray = (arr) => {
     return Math.floor(Math.random() * arr.length);
 };
+
 const get3uniqueIndexesFromArray = (arr) => {
     let randomIndexArray = []
     while (randomIndexArray.length < 3) {
@@ -42,7 +45,9 @@ nextButton.addEventListener('click', () => {
     titleButtons.forEach(button => {
         button.classList.remove('correct', 'incorrect');
     })
+
     loadNextQuestion();
+
 });
 
 loadNextQuestion = () => {
@@ -54,24 +59,23 @@ loadNextQuestion = () => {
             let selectedTask = taskArray[uniq3Indexes[0]]
             randomQuote.textContent = selectedTask.quote;
 
-            uniq3Indexes = shuffle(uniq3Indexes);
+            let options = selectedTask.options;
+            let correctIndex = selectedTask.correctIndex;
 
-            quoteOne.textContent = taskArray[uniq3Indexes[0]].title
-            quoteTwo.textContent = taskArray[uniq3Indexes[1]].title
-            quoteThree.textContent = taskArray[uniq3Indexes[2]].title
 
+            let shuffledIndexes = shuffle([...Array(options.length).keys()]);
+
+            for (let i = 0; i < titleButtons.length; i++) {
+                titleButtons[i].textContent = options[shuffledIndexes[i]];
+                titleButtons[i].dataset.winner = shuffledIndexes[i] === correctIndex ? 'true' : 'false';
+            }
+            startTimer();
             titleButtons.forEach((button) => {
-                if (selectedTask.title === button.textContent) {
-                    button.dataset.winner = 'true'
-                } else {
-                    button.dataset.winner = 'false'
-                }
                 button.disabled = false;
-            })
+            });
 
         })
 }
-
 
 
 titleButtons.forEach(button => {
@@ -94,20 +98,82 @@ titleButtons.forEach(button => {
     titleButtons.forEach(button => {
         button.disabled = true;
     });
-}
- startGameBtn.addEventListener('click', () => {
-    nextButton.click();
+    }
+const resetScore = () => {
+    correctAnswers = 0;
     updateScore();
+}
+
+const updateCircle = (percentRemaining) => {
+    const circle = document.querySelector('.countdown-circle');
+    const radius = circle.getAttribute('r');
+    const circumference = 2 * Math.PI * radius;
+    const dashoffset = circumference * (1 - percentRemaining);
+    circle.style.strokeDasharray = `${circumference}`;
+    circle.style.strokeDashoffset = dashoffset;
+};
+const startTimer = () => {
+    let startTime;
+    const duration = 20 * 1000;
+
+    const animate = (timestamp) => {
+        if (!startTime) {
+            startTime = timestamp;
+        }
+
+        const elapsedTime = timestamp - startTime;
+        const remainingTime = duration - elapsedTime;
+        const percentRemaining = remainingTime / duration;
+
+        if (remainingTime <= 0) {
+            disableButtons();
+            clearInterval(timer);
+            return;
+        }
+
+        countdownNumberEl.textContent = Math.ceil(remainingTime / 1000);
+        updateCircle(percentRemaining);
+
+
+        requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+};
+
+// const startTimer = () => {
+//     let countdown = 20;
+//     timer = setInterval(() => {
+//         if (countdown === 0) {
+//             clearInterval(timer);
+//             disableButtons();
+//             return;
+//         }
+//         countdown--;
+//         countdownNumberEl.textContent = countdown;
+//         updateCircle(countdown);
+//     }, 1000);
+// };
+
+//  updateCircle = (countdown) => {
+//     const circle = document.querySelector('.countdown-circle');
+//     const radius = circle.getAttribute('r');
+//     const circumference = 2 * Math.PI * radius;
+//     const percentRemaining = countdown / 20;
+//     const dashoffset = circumference * (1 - percentRemaining);
+//     circle.style.strokeDasharray = `${circumference} ${circumference}`;
+//     circle.style.strokeDashoffset = dashoffset;
+// }
+
+startGameBtn.addEventListener('click', () => {
+    questionsAnswersSection.classList.remove('hidden');
+
+    nextButton.click();
+        updateScore();
+        resetScore();
+        startTimer();
+
 });
-
-
-
-
-
-
-
-
-
 
 
 
