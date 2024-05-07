@@ -403,7 +403,7 @@ h2:hover {
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
     .wrapper{
-        top: 25%;
+
         left: 50%;
     }
 }
