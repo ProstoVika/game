@@ -311,19 +311,14 @@ h2:hover {
 
 
 @media screen and (max-width: 576px) {
-    .page-wrap{
-        height:100vh;
-        width: 100vh;
-
-    }
     .wrapper{
-        top: 22%;
         width: 330px;
         height: 564px;
-        left: 70%;
+        left: 50%;
+
     }
     h2{
-        left: 18%;
+        left: 1%;
     }
     .conditions{
         left: -10%;
@@ -362,13 +357,7 @@ h2:hover {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-    .page-wrap{
-        height:100vh;
-        width: 100vh;
-
-    }
     .wrapper{
-        top: 22%;
         width: 420px;
         height: 604px;
         left: 65%;
