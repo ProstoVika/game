@@ -55,6 +55,7 @@ const loadNextQuestion = () => {
     clearInterval(timer);
     timerSeconds = 20;
     updateTimer();
+    updateCircle(1);
 
     fetch('quotes.json')
         .then(data => data.json())
@@ -138,7 +139,6 @@ const startTimer = () => {
 startGameBtn.addEventListener('click', () => {
     questionsAnswersSection.classList.remove('hidden');
     loadNextQuestion();
-    updateCircle();
     updateScore();
     resetScore();
     startTimer();
