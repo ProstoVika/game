@@ -309,51 +309,113 @@ h2:hover {
     background-color: #811010;
 }
 
-@media only screen and (max-width: 650px) {
-    .page-wrap {
-        height: auto;
-        background-position: top;
+
+@media screen and (max-width: 576px) {
+    .page-wrap{
+        height:100vh;
+        width: 100vh;
+
+    }
+    .wrapper{
+        top: 22%;
+        width: 330px;
+        height: 564px;
+        left: 70%;
+    }
+    h2{
+        left: 18%;
+    }
+    .conditions{
+        left: -10%;
+    }
+    .instructions-button{
+        right: 3%;
+        top: 15px;
     }
 
-    .header {
-        position: static;
+    .random-box{
+        width: 300px;
+        height: 30px;
     }
 
-    h1 {
-        font-size: 2.4rem;
-        height: auto;
+    .random-quote{
+        font-size: 14px;
+        margin-top: 1px;
     }
 
-    .wrapper {
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        height: auto;
-        padding: 10px;
+    .answers{
+        font-size: 0.5rem;
     }
 
-    #particle-canvas {
-        height: 300px;
+    .title{
+        height: 30px;
+        width: 220px;
     }
 
-
-    .instructions {
-        width: 90%;
-        padding: 10px;
-        left: 5%;
-    }
-
-    .instructions-button, .instructions-button-small {
-        top: 10px;
-    }
-
-    .btn {
-        margin: 5px 20px;
-        font-size: 3rem;
-    }
-
-    .title {
-        width: 90%;
-        margin-left: 0;
+    #nextButton{
+        right: -45px;
+        top: 60%;
+        width: 34px;
+        height: 156px;
+        font-size: 1rem;
     }
 }
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .page-wrap{
+        height:100vh;
+        width: 100vh;
+
+    }
+    .wrapper{
+        top: 22%;
+        width: 420px;
+        height: 604px;
+        left: 65%;
+    }
+    h2{
+        left: 14%;
+    }
+    .random-box{
+        width: 400px;
+        height: 30px;
+    }
+    .random-quote{
+        font-size: 14px;
+        margin-top: 1px;
+    }
+    .answers{
+        font-size: 0.5rem;
+    }
+    .title{
+        height: 30px;
+        width: 320px;
+    }
+    #nextButton{
+        right: -55px;
+        top: 60%;
+        width: 40px;
+        height: 186px;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .wrapper{
+        top:25%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .wrapper{
+        top:25%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper{
+        top:25%;
+    }
+}
+
