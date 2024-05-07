@@ -312,10 +312,9 @@ h2:hover {
 
 @media screen and (max-width: 576px) {
     .wrapper{
-        width: 330px;
+        width: 360px;
         height: 564px;
         left: 50%;
-
     }
     h2{
         left: 1%;
@@ -324,7 +323,7 @@ h2:hover {
         left: -10%;
     }
     .instructions-button{
-        right: 3%;
+        right: 8%;
         top: 15px;
     }
 
@@ -358,9 +357,9 @@ h2:hover {
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
     .wrapper{
-        width: 420px;
-        height: 604px;
-        left: 65%;
+        width: 330px;
+        height: 564px;
+        left: 50%;
     }
     h2{
         left: 14%;
