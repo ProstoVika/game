@@ -124,7 +124,6 @@ const updateTimer = () => {
     countdownNumberEl.textContent = timerSeconds;
 };
 
-
 const startTimer = () => {
     timer = setInterval(() => {
         if (timerSeconds <= 0) {
@@ -141,7 +140,7 @@ startGameBtn.addEventListener('click', () => {
     loadNextQuestion();
     updateScore();
     resetScore();
-    startTimer();
+    startTimer(0);
 });
 
 
